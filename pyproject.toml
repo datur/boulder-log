@@ -1,0 +1,10 @@
+[project]
+name = "boulder-log"
+version = "0.1.0"
+description = "Django app for logging boulder problems."
+readme = "README.md"
+requires-python = ">=3.12.7"
+dependencies = [
+    "django>=4.2.19",
+    "ruff>=0.9.6",
+]
