@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     # Register models
     "boulder_log.data.users",
+    # Register interfaces
+    "boulder_log.interface.djangoadmin",
 ]
 
 MIDDLEWARE = [
