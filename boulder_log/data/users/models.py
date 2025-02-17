@@ -17,5 +17,5 @@ class User(django_auth_models.AbstractUser):
         editable=False,
     )
 
-    def __str__(self):
+    def __str__(self) -> str:
         return f"{self.id} - {self.username}"
