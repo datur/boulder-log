@@ -35,3 +35,9 @@ python manage.py createsuperuser
 ```bash
 python manage.py runserver
 ```
+
+## Database modeling
+
+The initial database model for the application is shown below:
+
+https://drawsql.app/teams/dave-1/diagrams/boulder-log
