@@ -6,7 +6,6 @@ readme = "README.md"
 requires-python = ">=3.12.7"
 dependencies = [
     "django>=4.2.19",
-    "pillow>=11.1.0",
     "ruff>=0.9.6",
 ]
 
