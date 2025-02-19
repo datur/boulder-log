@@ -41,3 +41,7 @@ python manage.py runserver
 The initial database model for the application is shown below:
 
 https://drawsql.app/teams/dave-1/diagrams/boulder-log
+
+## Discord Server
+
+The dev discord server is available [here.](https://discord.gg/rdtwUJ3N)
