@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     # Register models
     "boulder_log.data.boulders",
+    "boulder_log.data.locations",
     "boulder_log.data.users",
     # Register interfaces
     "boulder_log.interface.djangoadmin",
