@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-cq%j!qgljwtvh2jfk63o)p5c9^qxu50a=d$i5&5mpwg7oy(t$8
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["localhost"]
+ALLOWED_HOSTS = ["localhost", "127.0.0.1"]
 
 
 # Application definition
@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     "boulder_log.data.users",
     # Register interfaces
     "boulder_log.interface.djangoadmin",
+    "bootstrap5"
 ]
 
 MIDDLEWARE = [
@@ -61,7 +62,7 @@ ROOT_URLCONF = "boulder_log.core.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
+        "DIRS": [BASE_DIR / "templates"],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
