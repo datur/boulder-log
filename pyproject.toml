@@ -6,6 +6,7 @@ readme = "README.md"
 requires-python = ">=3.12.7"
 dependencies = [
     "django>=4.2.19",
+    "django-allauth[socialaccount]>=65.4.1",
     "pillow>=11.1.0",
     "ruff>=0.9.6",
 ]
