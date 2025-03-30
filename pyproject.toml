@@ -6,7 +6,10 @@ readme = "README.md"
 requires-python = ">=3.12.7"
 dependencies = [
     "django>=4.2.19",
+    "matplotlib>=3.10.1",
+    "opencv-python>=4.11.0.86",
     "pillow>=11.1.0",
+    "pillow-heif>=0.22.0",
     "ruff>=0.9.6",
 ]
 
@@ -35,3 +38,8 @@ ignore_missing_imports = true
 
 [tool.django-stubs]
 django_settings_module = "boulder_log.core.settings"
+
+[dependency-groups]
+dev = [
+    "jupyterlab>=4.3.6",
+]
