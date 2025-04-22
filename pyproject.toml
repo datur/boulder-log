@@ -41,5 +41,6 @@ django_settings_module = "boulder_log.core.settings"
 
 [dependency-groups]
 dev = [
+    "factory-boy>=3.3.3",
     "jupyterlab>=4.3.6",
 ]

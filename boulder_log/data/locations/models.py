@@ -1,4 +1,6 @@
+from __future__ import annotations
 from django.db import models
+from PIL import Image
 
 
 class Location(models.Model):
@@ -22,5 +24,43 @@ class Location(models.Model):
     date_modified = models.DateTimeField(auto_now=True, verbose_name="Date Modified")
     is_private = models.BooleanField(default=False, verbose_name="Is Private")
 
+    created_by = models.ForeignKey(
+        "users.User",
+        on_delete=models.CASCADE,
+        related_name="created_locations",
+    )
+
     def __str__(self) -> str:
         return f"{self.id} - {self.name}"
+
+    @classmethod
+    def new(
+        cls,
+        *,
+        name: str,
+        description: str,
+        latitude: float,
+        longitude: float,
+        created_by_id: int,
+        is_private: bool = False,
+        floor_plan_map: Image = None,
+    ) -> Location:
+        """
+        Create a new Location instance.
+        """
+        return cls.objects.create(
+            name=name,
+            description=description,
+            latitude=latitude,
+            longitude=longitude,
+            is_private=is_private,
+            floor_plan_map=floor_plan_map,
+            created_by_id=created_by_id,
+        )
+
+    @property
+    def is_public(self) -> bool:
+        """
+        Check if the location is public.
+        """
+        return not self.is_private
